@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class SquareOfIntegers{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Prompt user
+        System.out.print("Enter m value: ");
+        int m = sc.nextInt();
+
+        System.out.print("Enter n value: ");
+        int n = sc.nextInt();
+
+        int sum = 0;
+
+        if (m < n) {
+            for (int i = m; i < n; i++) {
+                int cube = i * i * i;
+                sum += cube;
+            }
+            System.out.println("Sum is: " + sum);
+        } else if (m == n) {
+            sum = m * m * m; // cube of m
+            System.out.println("Sum is: " + sum);
+        } else {
+            System.out.println("m > n");
+        }
+    }
+}
